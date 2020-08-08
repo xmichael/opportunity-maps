@@ -97,7 +97,7 @@ def test():
     cl.visualise_jenks()
 
 
-if __name__ == "__main__":
+def main():
     args = parse_arguments()
 
     cl = NaturalBreaksCSV(args.input_file, args.output_file, args.field_name, args.n)
@@ -106,3 +106,7 @@ if __name__ == "__main__":
         cl.visualise_jenks()
     print(cl.result)
     cl.save_to_csv()
+
+
+if __name__ == "__main__":
+    main()
